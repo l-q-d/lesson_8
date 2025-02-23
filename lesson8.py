@@ -4,7 +4,6 @@ import requests
 import folium
 from geopy.distance import lonlat, distance
 from dotenv import load_dotenv
-from pprint import pprint
 
 
 def fetch_coordinates(apikey, address):
@@ -73,8 +72,6 @@ def main():
             icon=folium.Icon(color="orange"),
         ).add_to(map_result)
     map_result.save("map.html")
-
-    pprint(top_5, sort_dicts=False)
 
 
 if __name__ == "__main__":
